@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import cmd
 """This module defines the class `HBHBCommand`"""
+import cmd
 
 
 class HBNBCommand(cmd.Cmd):
