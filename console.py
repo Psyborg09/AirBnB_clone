@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import cmd
-    """This module defines the class `HBHBCommand`"""
+"""This module defines the class `HBHBCommand`"""
+
 
 class HBNBCommand(cmd.Cmd):
     """Defines the entry point of the command interpreter"""
