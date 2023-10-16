@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import cmd
-
+    """This module defines the class `HBHBCommand`"""
 
 class HBNBCommand(cmd.Cmd):
-
+    """Defines the entry point of the command interpreter"""
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
@@ -17,6 +17,8 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
+        """Defines what happens when the `Enter` key is pressed
+        """
         return
 
 
