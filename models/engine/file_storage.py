@@ -2,6 +2,7 @@
 """This module create a class called FileStorage
 """
 import json
+from models.base_model import BaseModel
 
 
 class FileStorage:
@@ -26,7 +27,7 @@ class FileStorage:
         '''serializes `__objects` to the JSON file
         '''
         with open(self.__file_path, "w", encoding="utf-8") as json_file:
-            dict_repre = {k : v.to_dict() for k, v in self.__objects.items()}
+            dict_repre = {k: v.to_dict() for k, v in self.__objects.items()}
             json.dump(dict_repre, json_file)
 
     def reload(self):
