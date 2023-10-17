@@ -11,13 +11,11 @@ class BaseModel():
     """
 
     def __init__(self, *args, **kwargs):
-    """does the initialization
-    """
+        """does the initialization
+        """
         if kwargs:
             for key, value in kwargs.items():
-                if key == "__class__":
-                    continue
-                elif key == "updated_at" or key == "created_at":
+                if key == "updated_at" or key == "created_at":
                     self.__dict__[key] = datetime.fromisoformat(value)
                 else:
                     self.__dict__[key] = value
@@ -40,7 +38,7 @@ class BaseModel():
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of __dict__
-        of the instance
+           of the instance
         """
         dict_copy = self.__dict__.copy()
         dict_copy["__class__"] = self.__class__.__name__
