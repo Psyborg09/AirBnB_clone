@@ -7,7 +7,8 @@ from models.base_model import BaseModel
 
 class FileStorage:
     '''serializes instances to a JSON file and deserializes
-       JSON file to instances'''
+       JSON file to instances
+    '''
     __file_path = "file.json"
     __objects = {}
 
@@ -26,8 +27,8 @@ class FileStorage:
         '''serializes `__objects` to the JSON file
         '''
         with open(self.__file_path, "w", encoding="utf-8") as json_file:
-            dic = {k : v.to_dict() for k, v in self.__objects.items()}
-            json.dump(dic, json_file)
+            dict_repre = {k : v.to_dict() for k, v in self.__objects.items()}
+            json.dump(dict_repre, json_file)
 
     def reload(self):
         '''deserializes the JSON file to `__objects`
