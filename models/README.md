@@ -1,1 +1,1 @@
-this models readme file will be updated soon
+this is a directory that contains all worked on models in this project. It will soon be updated 
